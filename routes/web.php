@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::resource('orders', PostController::class);
+Route::resource('orders.details', DetailController::class);
+Route::resource('orders.details', DetailController::class)->shallow();
