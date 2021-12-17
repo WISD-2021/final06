@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OrderController;
-
+use App\Http\Controllers\ProductController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 Route::resource('orders', OrderController::class);
-Route::resource('users', UserController::class);
+Route::resource('products', ProductController::class);
 
 
 

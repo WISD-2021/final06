@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     use HasFactory;
+    //與orders關聯 多對多
+    public function orders(){
+        return $this->belongsToMany(Order::class);
+    }
 }
