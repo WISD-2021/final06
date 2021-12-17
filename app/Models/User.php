@@ -27,7 +27,10 @@ class User extends Authenticatable
     public function orders(){
         return $this->hasMany(Order::class);
     }
-
+    //與products關聯 多對多
+    public function products(){
+        return $this->belongsToMany(Product::class);
+    }
 
     protected $fillable = [
         'name',

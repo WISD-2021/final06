@@ -16,4 +16,8 @@ class Product extends Model
     public function admins(){
         return $this->belongsTo(Admin::class);
     }
+    //與users關聯 多對多
+    public function users(){
+        return $this->belongsToMany(User::class);
+    }
 }
