@@ -17,10 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
-
 Route::resource('orders', PostController::class);
 Route::resource('orders.details', DetailController::class);
 Route::resource('orders.details', DetailController::class)->shallow();
+
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/home',[HomeController::class,'index'])->name('home.index');

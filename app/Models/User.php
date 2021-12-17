@@ -23,6 +23,12 @@ class User extends Authenticatable
      *
      * @var string[]
      */
+    //與order關聯 一對多
+    public function order(){
+        return $this->hasMany(Order::class);
+    }
+
+
     protected $fillable = [
         'name',
         'email',
