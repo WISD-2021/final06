@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('orders', PostController::class);
-Route::resource('orders.details', DetailController::class);
-Route::resource('orders.details', DetailController::class)->shallow();
+Route::resource('orders', OrderController::class);
+Route::resource('users', UserController::class);
+
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/home',[HomeController::class,'index'])->name('home.index');

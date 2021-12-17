@@ -24,7 +24,7 @@ class User extends Authenticatable
      * @var string[]
      */
     //與order關聯 一對多
-    public function order(){
+    public function orders(){
         return $this->hasMany(Order::class);
     }
 
