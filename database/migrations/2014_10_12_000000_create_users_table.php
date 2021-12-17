@@ -11,17 +11,17 @@ class CreateUsersTable extends Migration
      *
      * @return void
      */
+    #php artisan migrate:fresh 資料庫全部更新
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
-            $table->foreignId('current_team_id')->nullable();
-            $table->string('profile_photo_path', 2048)->nullable();
+            $table->id();                                   #編號
+            $table->string('name');                  #姓名
+            $table->string('password');              #密碼
+            $table->string('address');               #地址
+            $table->string('phone');                 #電話
+            $table->date('birthday');                #生日
+            $table->string('email');                 #信箱
             $table->timestamps();
         });
     }
