@@ -12,4 +12,8 @@ class Product extends Model
     public function orders(){
         return $this->belongsToMany(Order::class);
     }
+    //與admins關聯 多對一
+    public function admins(){
+        return $this->belongsTo(Admin::class);
+    }
 }
