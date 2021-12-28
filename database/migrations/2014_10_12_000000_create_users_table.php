@@ -15,7 +15,7 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id();                                   #編號
+            $table->id();                            #編號
             $table->string('name');                  #姓名
             $table->string('password');              #密碼
             $table->string('address');               #地址
