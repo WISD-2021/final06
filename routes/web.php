@@ -5,6 +5,7 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\DetailController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,4 +26,10 @@ Route::resource('products', ProductController::class);
 Route::resource('details', DetailController::class);
 Route::resource('admins', AdminController::class);
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/home',[HomeController::class,'index'])->name('home.index');
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
+#修改會員資料頁面
+Route::get('/user/edit',[\App\Http\Controllers\UserController::class,'edit'])->name('user.edit');
+#更新會員資料
+Route::patch('/user/{id}',[\App\Http\Controllers\UserController::class,'update'])->name('user.update');
