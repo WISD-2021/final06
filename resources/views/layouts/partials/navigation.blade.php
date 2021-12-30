@@ -12,16 +12,19 @@
                     <a class="nav-link" href="{{route('dashboard')}}">首頁</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">購物車</a>
+                    <a class="nav-link" href="">醬油介紹</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">點餐紀錄</a>
+                    <a class="nav-link" href="">購買商品</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">修改會員資料</a>
+                    <a class="nav-link" href="">課程預約</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">問題回報</a>
+                    <a class="nav-link" href="">訂單資訊</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">個人資料</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="">登出</a>
