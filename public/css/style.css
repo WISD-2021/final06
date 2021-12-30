@@ -1304,11 +1304,11 @@ button:focus{
 .contact-block{}
 
 .contact-block .form-group .form-control{
-	background: #e50b0b;
+	background: #ffb1b1;
 	height: 45px;
 	font-size: 16px;
 	border: 0;
-	color: #ffffff;
+	color: #000000;
 	padding: 6px 15px;
 	-webkit-box-shadow: none;
 	box-shadow: none;

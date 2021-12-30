@@ -65,6 +65,7 @@
                     <li><a class="nav-link" href="#about">醬油介紹</a></li>
                     <li><a class="nav-link" href="#services">購買商品</a></li>
                     <li><a class="nav-link" href="#appointment">課程預約</a></li>
+                    <li><a class="nav-link" href="#contact">聯絡我們</a></li>
                     <li><a class="nav-link" href="#gallery">訂單資訊</a></li>
                     <li><a class="nav-link" href="#team">個人資料</a></li>
                     {{--                    @if (Route::has('login'))--}}
@@ -93,8 +94,7 @@
                     <div class="lbox-caption pogoSlider-slide-element">
                         <div class="lbox-details">
                             <h1>嚴選大豆</h1>
-                            <p><font size="120">經過衛生福利部認證大豆</font></p>
-                            <a href="#" class="btn">Contact Us</a>
+                            <p><font size="90">合格の豆は使います</font></p>
                         </div>
                     </div>
                 </div>
@@ -102,17 +102,15 @@
                     <div class="lbox-caption pogoSlider-slide-element">
                         <div class="lbox-details">
                             <h1>專業製造</h1>
-                            <p><font size="120">師傅一級棒</font></p>
-                            <a href="#appointment" class="btn">預約</a>
+                            <p><font size="90">全部は心があります</font></p>
                         </div>
                     </div>
                 </div>
                 <div class="pogoSlider-slide" data-transition="fade" data-duration="1500" style="background-image:url({{asset('images/slider-03.jpg')}});">
                     <div class="lbox-caption pogoSlider-slide-element">
                         <div class="lbox-details">
-                            <h1>濃醇香</h1>
-                            <p><font size="60">一家烤肉萬家香</font></p>
-                            <a href="#" class="btn">Contact Us</a>
+                            <h1>濃◦醇◦香</h1>
+                            <p><font size="90">家で料理を作る</font></p>
                         </div>
                     </div>
 
@@ -139,10 +137,10 @@
                 <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="row align-items-center about-main-info">
                         <div class="col-lg-6 col-md-6 col-sm-12">
-                            <h2>  </h2>
-                            <p>在學校餐廳打工時，同學來點餐，牛肉麵的牛肉給的比麵多</p>
-                            <p>肉羹飯的肉羹給的比飯多</p>
-                            <a href="#" class="new-btn-d br-2">Read More</a>
+                            <h2><b>對於醬油的認知</b></h2>
+                            <p>你知道市面上的醬油都是化學嗎?</p>
+                            <p>『外の醬油は加工するの物ご存知でしょうか？』</p>
+                            <a href="#" class="new-btn-d br-2">知道更多</a>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="about-m">
@@ -178,92 +176,67 @@
                 <div class="owl-carousel owl-theme">
                     <div class="item">
                         <div class="serviceBox">
-                            <div class="service-icon"><i class="fa fa-h-square" aria-hidden="true"></i></div>
-                            <h3 class="title">Lorem ipsum dolor</h3>
+                            <div class="service-icon"><img src="{{asset('images/product_01.jpg')}}"></div>
+                            <h3 class="title">古早味手工柴燒醬油膏</h3>
                             <p class="description">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur.
+                                60年甘醇厚實經典醬香<br>
+                                ◎嚴選當季黑豆釀造<br>
+                                ◎古法釀造純手工柴燒<br>
+                                ◎豆香濃郁、風味有層次變化
                             </p>
-                            <a href="#" class="new-btn-d br-2">Read More</a>
+                            <a href="#" class="new-btn-d br-2">訂購</a>
                         </div>
                     </div>
                     <div class="item">
                         <div class="serviceBox">
-                            <div class="service-icon"><i class="fa fa-heart" aria-hidden="true"></i></div>
-                            <h3 class="title">Lorem ipsum dolor</h3>
+                            <div class="service-icon"><img src="{{asset('images/product_01.jpg')}}"></div>
+                            <h3 class="title">古早味手工柴燒醬油清</h3>
                             <p class="description">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur.
+                                60年甘醇厚實經典醬香<br>
+                                ◎嚴選當季黑豆釀造<br>
+                                ◎古法釀造純手工柴燒<br>
+                                ◎豆香濃郁、風味有層次變化<br>
                             </p>
-                            <a href="#" class="new-btn-d br-2">Read More</a>
+                            <a href="#" class="new-btn-d br-2">訂購</a>
                         </div>
                     </div>
                     <div class="item">
                         <div class="serviceBox">
-                            <div class="service-icon"><i class="fa fa-hospital-o" aria-hidden="true"></i></div>
-                            <h3 class="title">Lorem ipsum dolor</h3>
+                            <div class="service-icon"><img src="{{asset('images/product_03.jpg')}}"></div>
+                            <h3 class="title">土旺來黑豆醬油清</h3>
                             <p class="description">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur.
+                                60年甘醇厚實經典醬香<br>
+                                ◎嚴選當季黑豆釀造<br>
+                                ◎古法釀造純手工柴燒<br>
+                                ◎豆香濃郁、風味有層次變化<br>
                             </p>
-                            <a href="#" class="new-btn-d br-2">Read More</a>
+                            <a href="#" class="new-btn-d br-2">訂購</a>
                         </div>
                     </div>
                     <div class="item">
                         <div class="serviceBox">
-                            <div class="service-icon"><i class="fa fa-stethoscope" aria-hidden="true"></i></div>
-                            <h3 class="title">Lorem ipsum dolor</h3>
+                            <div class="service-icon"><img src="{{asset('images/product_05.jpg')}}"></div>
+                            <h3 class="title">薄鹽清香柴燒壺底油</h3>
                             <p class="description">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur.
+                                60年甘醇厚實經典醬香<br>
+                                ◎嚴選當季黑豆釀造<br>
+                                ◎古法釀造純手工柴燒<br>
+                                ◎豆香濃郁、風味有層次變化<br>
                             </p>
-                            <a href="#" class="new-btn-d br-2">Read More</a>
+                            <a href="#" class="new-btn-d br-2">訂購</a>
                         </div>
                     </div>
                     <div class="item">
                         <div class="serviceBox">
-                            <div class="service-icon"><i class="fa fa-wheelchair" aria-hidden="true"></i></div>
-                            <h3 class="title">Lorem ipsum dolor</h3>
+                            <div class="service-icon"><img src="{{asset('images/product_04.jpg')}}"></div>
+                            <h3 class="title">看更多商品</h3>
                             <p class="description">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur.
+                            ...<br>
+                            ...<br>
+                            ...<br>
+                            ...<br>
                             </p>
-                            <a href="#" class="new-btn-d br-2">Read More</a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="serviceBox">
-                            <div class="service-icon"><i class="fa fa-plus-square" aria-hidden="true"></i></div>
-                            <h3 class="title">Lorem ipsum dolor</h3>
-                            <p class="description">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur.
-                            </p>
-                            <a href="#" class="new-btn-d br-2">Read More</a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="serviceBox">
-                            <div class="service-icon"><i class="fa fa-medkit" aria-hidden="true"></i></div>
-                            <h3 class="title">Lorem ipsum dolor</h3>
-                            <p class="description">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur.
-                            </p>
-                            <a href="#" class="new-btn-d br-2">Read More</a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="serviceBox">
-                            <div class="service-icon"><i class="fa fa-user-md" aria-hidden="true"></i></div>
-                            <h3 class="title">Lorem ipsum dolor</h3>
-                            <p class="description">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur.
-                            </p>
-                            <a href="#" class="new-btn-d br-2">Read More</a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="serviceBox">
-                            <div class="service-icon"><i class="fa fa-ambulance" aria-hidden="true"></i></div>
-                            <h3 class="title">Lorem ipsum dolor</h3>
-                            <p class="description">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur.
-                            </p>
-                            <a href="#" class="new-btn-d br-2">Read More</a>
+                            <a href="#" class="new-btn-d br-2">看更多</a>
                         </div>
                     </div>
                 </div>
@@ -288,15 +261,15 @@
             <div class="col-lg-6 col-md-6">
                 <div class="well-block">
                     <div class="well-title">
-                        <h2>Book an Appointment</h2>
+                        <h2>與我們預約</h2>
                     </div>
                     <form>
                         <!-- Form start -->
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label class="control-label" for="name">Name</label>
-                                    <input id="name" name="name" type="text" placeholder="Name" class="form-control input-md">
+                                    <label class="control-label" for="name">姓名</label>
+                                    <input id="name" name="name" type="text" placeholder="姓名" class="form-control input-md">
                                 </div>
                             </div>
                             <!-- Text input-->
@@ -309,39 +282,39 @@
                             <!-- Text input-->
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label class="control-label" for="date">Preferred Date</label>
-                                    <input id="date" name="date" type="text" placeholder="Preferred Date" class="form-control input-md">
+                                    <label class="control-label" for="date">預約日期</label>
+                                    <input id="date" name="date" type="text" placeholder="預約日期" class="form-control input-md">
                                 </div>
                             </div>
                             <!-- Select Basic -->
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label class="control-label" for="time">Preferred Time</label>
+                                    <label class="control-label" for="time">預約時段</label>
                                     <select id="time" name="time" class="form-control">
-                                        <option value="8:00 to 9:00">8:00 to 9:00</option>
-                                        <option value="9:00 to 10:00">9:00 to 10:00</option>
-                                        <option value="10:00 to 1:00">10:00 to 1:00</option>
+                                        <option value="8:00 to 9:00">8:00 ~ 9:00</option>
+                                        <option value="9:00 to 10:00">9:00 ~ 10:00</option>
+                                        <option value="10:00 to 1:00">10:00 ~ 1:00</option>
                                     </select>
                                 </div>
                             </div>
                             <!-- Select Basic -->
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label class="control-label" for="appointmentfor">Department</label>
-                                    <select id="appointmentfor" name="appointmentfor" class="form-control">
-                                        <option value="Choose Department">Choose Department</option>
-                                        <option value="Gynacology">Gynacology</option>
-                                        <option value="Dermatologist">Dermatologist</option>
-                                        <option value="Orthology">Orthology</option>
-                                        <option value="Anesthesiology">Anesthesiology</option>
-                                        <option value="Ayurvedic">Ayurvedic</option>
-                                    </select>
-                                </div>
-                            </div>
+{{--                            <div class="col-md-12">--}}
+{{--                                <div class="form-group">--}}
+{{--                                    <label class="control-label" for="appointmentfor">Department</label>--}}
+{{--                                    <select id="appointmentfor" name="appointmentfor" class="form-control">--}}
+{{--                                        <option value="Choose Department">Choose Department</option>--}}
+{{--                                        <option value="Gynacology">Gynacology</option>--}}
+{{--                                        <option value="Dermatologist">Dermatologist</option>--}}
+{{--                                        <option value="Orthology">Orthology</option>--}}
+{{--                                        <option value="Anesthesiology">Anesthesiology</option>--}}
+{{--                                        <option value="Ayurvedic">Ayurvedic</option>--}}
+{{--                                    </select>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
                             <!-- Button -->
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <button id="singlebutton" name="singlebutton" class="new-btn-d br-2">Make An Appointment</button>
+                                    <center><button id="singlebutton" name="singlebutton" class="new-btn-d br-2">確認預約</button>
                                 </div>
                             </div>
                         </div>
@@ -352,25 +325,25 @@
             <div class="col-lg-6 col-md-6">
                 <div class="well-block">
                     <div class="well-title">
-                        <h2>Why Appointment with Us</h2>
+                        <h2>為什麼要與我們預約?</h2>
                     </div>
                     <div class="feature-block">
                         <div class="feature feature-blurb-text">
-                            <h4 class="feature-title">24/7 Hours Available</h4>
+                            <h4 class="feature-title">✧健康的手工醬油✧</h4>
                             <div class="feature-content">
-                                <p>Integer nec nisi sed mi hendrerit mattis. Vestibulum mi nunc, ultricies quis vehicula et, iaculis in magnestibulum.</p>
+                                <p>&nbsp;&nbsp;體驗及參與手工醬油的製程，更能理解手工醬油的健康</p>
                             </div>
                         </div>
                         <div class="feature feature-blurb-text">
-                            <h4 class="feature-title">Experienced Staff Available</h4>
+                            <h4 class="feature-title">✧讓孩子學到更多✧</h4>
                             <div class="feature-content">
-                                <p>Aliquam sit amet mi eu libero fermentum bibendum pulvinar a turpis. Vestibulum quis feugiat risus. </p>
+                                <p>&nbsp;&nbsp;現在很少孩子知道手工醬油是什麼了，讓孩子了解手工醬油的健康與製程，健康傳承下一代</p>
                             </div>
                         </div>
                         <div class="feature feature-blurb-text">
-                            <h4 class="feature-title">Low Price & Fees</h4>
+                            <h4 class="feature-title">✧專業的人員✧</h4>
                             <div class="feature-content">
-                                <p>Praesent eu sollicitudin nunc. Cras malesuada vel nisi consequat pretium. Integer auctor elementum nulla suscipit in.</p>
+                                <p>&nbsp;&nbsp;專業師傅展示與介紹，讓知識更豐富</p>
                             </div>
                         </div>
                     </div>
@@ -388,7 +361,7 @@
             <div class="col-lg-12">
                 <div class="title-box">
                     <h2>聯絡我們</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                    <p>讓我們知道更多</p>
                 </div>
             </div>
         </div>
@@ -422,7 +395,7 @@
                                     <div class="help-block with-errors"></div>
                                 </div>
                                 <div class="submit-button text-center">
-                                    <button class="btn btn-common" id="submit" type="submit">Send Message</button>
+                                    <button class="btn btn-common" id="submit" type="submit">送出資訊</button>
                                     <div id="msgSubmit" class="h3 text-center hidden"></div>
                                     <div class="clearfix"></div>
                                 </div>
@@ -435,14 +408,14 @@
 
             <div class="col-lg-12 col-xs-12">
                 <div class="left-contact">
-                    <h2>Address</h2>
+                    <h2>地址</h2>
                     <div class="media cont-line">
                         <div class="media-left icon-b">
                             <i class="fa fa-location-arrow" aria-hidden="true"></i>
                         </div>
                         <div class="media-body dit-right">
-                            <h4>Address</h4>
-                            <p>Fleming 196 Woodside Circle Mobile, FL 36602</p>
+                            <h4>地址</h4>
+                            <p>648雲林縣西螺鎮安定路171-11號</p>
                         </div>
                     </div>
                     <div class="media cont-line">
@@ -460,7 +433,7 @@
                             <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
                         </div>
                         <div class="media-body dit-right">
-                            <h4>Phone Number</h4>
+                            <h4>聯絡電話</h4>
                             <a href="#">12345 67890</a><br>
                             <a href="#">12345 67890</a>
                         </div>
