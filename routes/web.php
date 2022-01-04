@@ -33,3 +33,5 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::get('/user/edit',[\App\Http\Controllers\UserController::class,'edit'])->name('user.edit');
 #更新會員資料
 Route::patch('/user/{id}',[\App\Http\Controllers\UserController::class,'update'])->name('user.update');
+#商品頁面
+Route::get('/product',[\App\Http\Controllers\ProductController::class,'product'])->name('product');

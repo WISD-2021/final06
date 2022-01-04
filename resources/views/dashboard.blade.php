@@ -132,7 +132,7 @@
                             ...<br>
                             ...<br>
                             </p>
-                            <a href="#" class="new-btn-d br-2">看更多</a>
+                            <a href="{{route('product')}}" class="new-btn-d br-2">看更多</a>
                         </div>
                     </div>
                 </div>
