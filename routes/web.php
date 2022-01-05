@@ -6,6 +6,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\DetailController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\InformationController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,9 +30,13 @@ Route::resource('admins', AdminController::class);
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+
 #修改會員資料頁面
 Route::get('/user/edit',[\App\Http\Controllers\UserController::class,'edit'])->name('user.edit');
 #更新會員資料
 Route::patch('/user/{id}',[\App\Http\Controllers\UserController::class,'update'])->name('user.update');
 #商品頁面
 Route::get('/product',[\App\Http\Controllers\ProductController::class,'product'])->name('product');
+#介紹頁面
+Route::get('/information',[\App\Http\Controllers\InformationController::class,'information'])->name('information');

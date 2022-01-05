@@ -35,8 +35,8 @@
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <h2><b>對於醬油的認知</b></h2>
                             <p>你知道市面上的醬油都是化學嗎?</p>
-                            <p>『外の醬油は加工するの物ご存知でしょうか？』</p>
-                            <a href="#" class="new-btn-d br-2">知道更多</a>
+                            <p>『外の醬油は加工するの物ご存知ですか？』</p>
+                            <a href="{{route('information')}}" class="new-btn-d br-2">知道更多</a>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="about-m">
@@ -80,7 +80,6 @@
                                 ◎古法釀造純手工柴燒<br>
                                 ◎豆香濃郁、風味有層次變化
                             </p>
-                            <a href="#" class="new-btn-d br-2">訂購</a>
                         </div>
                     </div>
                     <div class="item">
@@ -93,7 +92,6 @@
                                 ◎古法釀造純手工柴燒<br>
                                 ◎豆香濃郁、風味有層次變化<br>
                             </p>
-                            <a href="#" class="new-btn-d br-2">訂購</a>
                         </div>
                     </div>
                     <div class="item">
@@ -106,7 +104,6 @@
                                 ◎古法釀造純手工柴燒<br>
                                 ◎豆香濃郁、風味有層次變化<br>
                             </p>
-                            <a href="#" class="new-btn-d br-2">訂購</a>
                         </div>
                     </div>
                     <div class="item">
@@ -119,7 +116,6 @@
                                 ◎古法釀造純手工柴燒<br>
                                 ◎豆香濃郁、風味有層次變化<br>
                             </p>
-                            <a href="#" class="new-btn-d br-2">訂購</a>
                         </div>
                     </div>
                     <div class="item">
@@ -127,10 +123,8 @@
                             <div class="service-icon"><img src="{{asset('images/product_04.jpg')}}"></div>
                             <h3 class="title">看更多商品</h3>
                             <p class="description">
-                            ...<br>
-                            ...<br>
-                            ...<br>
-                            ...<br>
+                            <font size="6.7px"></font><br>
+                            <br>
                             </p>
                             <a href="{{route('product')}}" class="new-btn-d br-2">看更多</a>
                         </div>
