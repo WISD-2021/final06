@@ -5,6 +5,7 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\DetailController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
@@ -35,3 +36,13 @@ Route::get('/user/edit',[\App\Http\Controllers\UserController::class,'edit'])->n
 Route::patch('/user/{id}',[\App\Http\Controllers\UserController::class,'update'])->name('user.update');
 #商品頁面
 Route::get('/product',[\App\Http\Controllers\ProductController::class,'product'])->name('product');
+#後台管理
+Route::group(['prefix' => 'admin'], function() {
+    Route::get('/',[AdminDashboardController::class,'index'])->name( 'admin.dashboard.index');
+    Route::get('products',[AdminController::class,'index'])->name( 'admin.products.index');
+    Route::get('products/create',[AdminController::class,'create'])->name('admin.products.create');
+    Route::get('products/{id}/edit',[AdminController::class,'edit'])->name('admin.products.edit');
+    Route::post('products/store',[AdminController::class,'store'])->name('admin.products.store');
+    Route::patch('products/{product}',[AdminController::class,'update'])->name('admin.products.update');
+    Route::delete('products/{product}',[AdminController::class,'destroy'])->name('admin.products.destroy');
+});

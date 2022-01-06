@@ -8,6 +8,35 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'id',
+        'name',
+        'sort',
+        'price',
+        'capacity',
+        'date',
+        'year',
+        'stock',
+        'introduce',
+        'status',
+        'image',
+    ];
+
+    protected $casts = [
+
+        'name' => 'string',
+        'sort' => 'string',
+        'price' => 'integer',
+        'capacity' => 'integer',
+        'date' => 'date',
+        'year' => 'integer',
+        'stock' => 'integer',
+        'introduce' => 'string',
+        'status' => 'string',
+        'image' => 'string',
+    ];
+
     //與orders關聯 多對多
     public function orders(){
         return $this->belongsToMany(Order::class);
