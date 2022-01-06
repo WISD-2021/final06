@@ -24,7 +24,7 @@ class CreateProductsTable extends Migration
             $table->integer('stock');    #庫存
             $table->text('introduce');   #介紹
             $table->text('status');      #狀態
-            $table->string('image');     #圖片
+            $table->string('image')->default('暫無商品.png');     #圖片
             $table->timestamps();
 
         });
