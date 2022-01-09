@@ -39,10 +39,9 @@ Route::get('/user/edit',[\App\Http\Controllers\UserController::class,'edit'])->n
 Route::patch('/user/{id}',[\App\Http\Controllers\UserController::class,'update'])->name('user.update');
 #商品頁面
 Route::get('/product',[\App\Http\Controllers\ProductController::class,'product'])->name('product');
-<<<<<<< HEAD
 #介紹頁面
 Route::get('/information',[\App\Http\Controllers\InformationController::class,'information'])->name('information');
-=======
+
 #後台管理
 Route::group(['prefix' => 'admin'], function() {
     Route::get('/',[AdminDashboardController::class,'index'])->name( 'admin.dashboard.index');
@@ -53,4 +52,3 @@ Route::group(['prefix' => 'admin'], function() {
     Route::patch('products/{product}',[AdminController::class,'update'])->name('admin.products.update');
     Route::delete('products/{product}',[AdminController::class,'destroy'])->name('admin.products.destroy');
 });
->>>>>>> 36ccd67dfcd9ab50aec92952c6d441e9b26a45b5
