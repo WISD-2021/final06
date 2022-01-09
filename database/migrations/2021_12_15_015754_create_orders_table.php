@@ -17,6 +17,8 @@ class CreateOrdersTable extends Migration
             $table->id();
             $table->unsignedBigInteger('users_id');
             $table->foreign('users_id')->references('id')->on('users');  #會員編號
+            $table->unsignedBigInteger('products_id');
+            $table->foreign('products_id')->references('id')->on('products');#商品編號
             $table->integer('number');   #數量
             $table->integer('sum');      #總價
             $table->date('date');        #日期

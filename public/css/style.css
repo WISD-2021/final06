@@ -150,7 +150,51 @@ button:focus{
     opacity: 1;
 }
 
+ .rectangle{
+     height: 500px;
+     background-repeat: no-repeat;
+ }
+/* 左邊圖右邊字*/
+.rectangle-left{
+    float:left;
+    width: 60%;
+    height: 500px;
+    clip-path: polygon(0% 0%, 85% 0%, 100% 100%, 0% 100%);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-top:1%;
+}
+.rectangle-text-right{
+    float:right;
+    width: 40%;
+    height: 500px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 1%;
+    margin-top:1%;
+}
 
+/* 右邊圖左邊字*/
+.rectangle-right{
+    float:right;
+    width:60%;
+    height: 500px;
+    clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-top:1%;
+}
+.rectangle-text-left{
+    float:left;
+    width: 40%;
+    height: 500px;
+    clip-path: polygon(0 0, 85% 0, 100% 100%, 0% 100%);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 1%;
+    margin-top:1%;
+}
 /*------------------------------------------------------------------
     LOADER
 -------------------------------------------------------------------*/
@@ -596,11 +640,14 @@ button:focus{
 	margin-bottom: 30px;
 }
 
-.about-m{
+.m{
 	border: 2px solid #e50b0b;
 	box-shadow: 0 10px 25px 0 rgba(0,0,40,.2);
 }
-
+.about-info{
+    border: 2px solid #FFFFFF;
+    box-shadow: 0 10px 25px 0 rgba(0,0,40,.2);
+}
 .about-m ul#banner {
   position: relative;
   width: 100%;

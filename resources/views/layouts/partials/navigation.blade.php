@@ -74,6 +74,9 @@
                     <a class="nav-link" href="{{route('dashboard')}}">訂單資訊</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="{{route('cart.index')}}">購物車</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="{{route('user.edit')}}">個人資料</a>
                 </li>
 {{--                    @if (Route::has('login'))--}}
