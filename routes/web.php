@@ -39,6 +39,8 @@ Route::get('/user/edit',[\App\Http\Controllers\UserController::class,'edit'])->n
 Route::patch('/user/{id}',[\App\Http\Controllers\UserController::class,'update'])->name('user.update');
 #商品頁面
 Route::get('/product',[\App\Http\Controllers\ProductController::class,'product'])->name('product');
+#餐點詳細頁面
+Route::get('/product/show/{id}',[\App\Http\Controllers\ProductController::class,'show'])->name('product.show');
 #介紹頁面
 Route::get('/information',[\App\Http\Controllers\InformationController::class,'information'])->name('information');
 
