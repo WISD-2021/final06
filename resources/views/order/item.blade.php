@@ -1,18 +1,18 @@
 @extends('layouts.master')
 
-@section('title','點餐明細')
+@section('title','商品明細')
 
 @section('content')
 
     <!-- Page Header -->
-    <header class="masthead" style="background-image: url('{{asset('img/about-bg.jpg')}}')">
+    <header class="masthead" style="background-image: url('{{asset('images/user_edit_bg.jpeg')}}')">
         <div class="overlay"></div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-10 mx-auto">
                     <div class="page-heading">
-                        <h1>點餐明細</h1>
-                        <span class="subheading">Order details.</span>
+                        <h1 style="color: white">訂單明細</h1>
+                        <span class="subheading">ご注文内容</span>
                     </div>
                 </div>
             </div>
@@ -24,13 +24,10 @@
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
                     @csrf
-
-
-
                 <table class="table table-bordered table-hover">
                     <thead>
                     <tr>
-                        <th width="20%" style="text-align: center">餐點名稱</th>
+                        <th width="20%" style="text-align: center">名稱</th>
                         <th width="20%" style="text-align: center">價格</th>
                         <th width="10%" style="text-align: center">數量</th>
                         <th width="20%" style="text-align: center">小計</th>

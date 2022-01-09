@@ -1,18 +1,18 @@
 @extends('layouts.master')
 
-@section('title','點餐紀錄')
+@section('title','訂單紀錄')
 
 @section('content')
 
     <!-- Page Header -->
-    <header class="masthead" style="background-image: url('{{asset('img/about-bg.jpg')}}')">
+    <header class="masthead" style="background-image: url('{{asset('images/user_edit_bg.jpeg')}}')">
         <div class="overlay"></div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-10 mx-auto">
                     <div class="page-heading">
-                        <h1>點餐紀錄</h1>
-                        <span class="subheading">Order record.</span>
+                        <h1 style="color: white">訂單紀錄</h1>
+                        <span class="subheading">ご注文履歴一覧</span>
                     </div>
                 </div>
             </div>
@@ -67,7 +67,9 @@
 
                 @else
                     <div style="text-align: center">
-                        您尚未訂購過任何商品
+                        <div class="title-box">
+                            <h2>您尚未訂購過任何商品</h2>
+                        </div>
                     </div>
                 @endif
             </div>

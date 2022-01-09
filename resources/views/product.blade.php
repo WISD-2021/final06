@@ -10,8 +10,8 @@
             <div class="row">
                 <div class="col-lg-8 col-md-10 mx-auto">
                     <div class="page-heading">
-                        <h1>商品頁面</h1>
-                        <span class="subheading">All products.</span>
+                        <h1 style="color: white">商品頁面</h1>
+                        <span class="subheading">新着商品</span>
                     </div>
                 </div>
             </div>

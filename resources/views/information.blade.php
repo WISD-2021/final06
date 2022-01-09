@@ -11,7 +11,7 @@
                 <div class="col-lg-8 col-md-10 mx-auto">
                     <div class="page-heading">
                         <h1 style="color: white">醬油介紹</h1>
-                        <span class="subheading">Soy sauce introduction.</span>
+                        <span class="subheading">醤油の紹介</span>
                     </div>
                 </div>
             </div>

@@ -147,7 +147,7 @@ class CartController extends Controller
 
         $order_id=DB::table('orders')
             ->where('users_id',$name)
-            ->orderBy('date','desc')
+            ->orderBy('created_at','desc')
             ->select('id')
             ->first();
 
@@ -171,10 +171,8 @@ class CartController extends Controller
             $total = ($cart->price)*($cart->amount)+$total;
             $sums=$cart->amount+$sums;
         }
-
         Cart::where('users_id',$name)->delete();
         Order::where('id',$order_id->id)->update(['sum' =>$total]);
-        Order::where('id',$order_id->id)->update(['number' =>$sums]);
 
         return redirect()->route('product')->with('status','系統提示：訂單已送出！');
     }

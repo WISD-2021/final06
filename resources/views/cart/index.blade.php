@@ -5,14 +5,14 @@
 @section('content')
 
     <!-- Page Header -->
-    <header class="masthead" style="background-image: url('{{asset('img/about-bg.jpg')}}')">
+    <header class="masthead" style="background-image: url('{{asset('images/user_edit_bg.jpeg')}}')">
         <div class="overlay"></div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-10 mx-auto">
                     <div class="page-heading">
                         <h1 style="color: white">購物車</h1>
-                        <span class="subheading">Cart.</span>
+                        <span class="subheading">ショッピングカート</span>
                     </div>
                 </div>
             </div>
@@ -73,7 +73,10 @@
 
                 @else
                     <div style="text-align: center">
-                        購物車裡空空如也
+                        <div class="title-box">
+                            <h2>趕快去購物吧!</h2>
+                        </div>
+
                     </div>
                 @endif
             </div>
