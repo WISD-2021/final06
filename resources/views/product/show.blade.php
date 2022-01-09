@@ -51,7 +51,7 @@
                                     {{$product->capacity}}
                                 </td>
                                 <td style="text-align: center;line-height:100px;">
-                                    ${{$product->year}}
+                                    {{$product->year}}
                                 </td>
                                 <td style="text-align: center;vertical-align: middle;">
                                     <input style="width: 50%;" type="number" name="amount" min="1" max="99" value="1">
@@ -63,6 +63,7 @@
                     </table>
                 <div style="text-align:center">
                     <a class="btn btn-sm btn-danger" href="{{route('product')}}">取消</a>
+                    &emsp;&emsp;<button type="submit" class="btn btn-sm btn-primary" name="products_id" value="{{$product->id}}">加入購物車</button>
                 </div>
 
             </div>
