@@ -26,7 +26,7 @@
                 <form action="/cart/store" method="post">
                     @method('POST')
                     @csrf
-                    <input type="hidden" name="user_id" value="{{$name}}">
+                    <input type="hidden" name="users_id" value="{{$name}}">
                     <table class="table table-bordered table-hover">
                         <thead>
                         <tr>

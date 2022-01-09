@@ -49,7 +49,7 @@ class ProductController extends Controller
      */
     public function show(Product $product,$id)
     {
-        $name=Auth::user()->name;
+        $name=Auth::user()->id;
         $food=Product::where('id',$id)->get();
         $data=['product'=>$food,'name'=>$name];
         return view('product.show',$data);

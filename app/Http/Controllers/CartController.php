@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Cart;
 use App\Http\Requests\StoreCartRequest;
 use App\Http\Requests\UpdateCartRequest;
+use Illuminate\Http\Request;
 
 class CartController extends Controller
 {
@@ -31,12 +32,14 @@ class CartController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreCartRequest  $request
-     * @return \Illuminate\Http\Response
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(StoreCartRequest $request)
+    public function store(Request $request)
     {
-        //
+        #dd($request);
+        Cart::create($request->all());
+        return redirect()->route('product')->with('status','系統提示：餐點已加入購物車');
     }
 
     /**
