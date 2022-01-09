@@ -46,6 +46,10 @@ Route::get('/product/show/{id}',[\App\Http\Controllers\ProductController::class,
 Route::get('/cart/index',[\App\Http\Controllers\CartController::class,'index'])->name('cart.index');
 #結帳頁面
 Route::get('/cart/final',[\App\Http\Controllers\CartController::class,'final'])->name('cart.final');
+#訂單頁面
+Route::get('/order/history',[\App\Http\Controllers\OrderController::class,'index'])->name('order.history');
+#訂單詳細頁面
+Route::get('/order/item/{id}',[\App\Http\Controllers\OrderController::class,'show'])->name('order.item');
 #介紹頁面
 Route::get('/information',[\App\Http\Controllers\InformationController::class,'information'])->name('information');
 

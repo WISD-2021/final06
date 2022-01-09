@@ -22,7 +22,8 @@ class Order extends Model
         return $this->belongsTo(User::class);
     }
     //與products關聯 多對多
-    public function products(){
-        return $this->belongsToMany(product::class);
+    public function items()
+    {
+        return $this->hasMany(Item::class);
     }
 }

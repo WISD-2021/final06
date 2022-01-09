@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Cart;
 use App\Models\Order;
 use App\Models\Product;
+use App\Models\Item;
 use App\Http\Requests\StoreCartRequest;
 use App\Http\Requests\UpdateCartRequest;
 use Illuminate\Http\Request;
@@ -133,7 +134,23 @@ class CartController extends Controller
     public function clear()
     {
         $name=Auth::user()->id;
+
         #dd($carts);
+
+        Order::create([
+            'users_id'=>$name,
+            'date'=>Carbon::now(),
+            'status'=>'未完成',
+            'sum'=>0,
+            'number'=>0,
+        ]);
+
+        $order_id=DB::table('orders')
+            ->where('users_id',$name)
+            ->orderBy('date','desc')
+            ->select('id')
+            ->first();
+
         $carts=DB::table('carts')
             ->join('products','carts.products_id','=','products.id')
             ->select('products.id','products.price','amount')
@@ -141,20 +158,23 @@ class CartController extends Controller
             ->get();
 
         ['carts'=>$carts];
-
+        $total=0;
+        $sums=0;
         foreach ($carts as $cart)
         {
-            Order::create([
-                'users_id'=>$name,
+            Item::create([
+                'orders_id'=>$order_id->id,
                 'products_id'=>$cart->id,
-                'number'=>$cart->amount,
-                'sum'=>$cart->price,
-                'date'=>Carbon::now(),
-                'status'=>'未完成',
+                'amount'=>$cart->amount,
+                'total'=>$cart->price,
             ]);
+            $total = ($cart->price)*($cart->amount)+$total;
+            $sums=$cart->amount+$sums;
         }
 
         Cart::where('users_id',$name)->delete();
+        Order::where('id',$order_id->id)->update(['sum' =>$total]);
+        Order::where('id',$order_id->id)->update(['number' =>$sums]);
 
         return redirect()->route('product')->with('status','系統提示：訂單已送出！');
     }

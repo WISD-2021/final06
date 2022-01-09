@@ -71,7 +71,7 @@
                     <a class="nav-link" href="{{route('dashboard')}}#contact">聯絡我們</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('dashboard')}}">訂單資訊</a>
+                    <a class="nav-link" href="{{route('order.history')}}">訂單資訊</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('cart.index')}}">購物車</a>
