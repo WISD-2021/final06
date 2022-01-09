@@ -17,8 +17,6 @@ class CreateCartsTable extends Migration
             $table->id();                                 #購物車編號
             $table->unsignedBigInteger('users_id');             #使用者名稱
             $table->foreign('users_id')->references('id')->on('users');
-            $table->unsignedBigInteger('products_id'); #餐點編號
-            $table->foreign('products_id')->references('id')->on('products');
             $table->integer('amount')->default('1');#數量
             $table->timestamps();
         });

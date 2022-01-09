@@ -3,13 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cart;
+use App\Models\Order;
 use App\Models\Product;
 use App\Http\Requests\StoreCartRequest;
 use App\Http\Requests\UpdateCartRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-
+use Carbon\Carbon;
 class CartController extends Controller
 {
     /**
@@ -54,7 +55,6 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
-        #dd($request);
         Cart::create($request->all());
         return redirect()->route('product')->with('status','系統提示：餐點已加入購物車');
     }
@@ -99,8 +99,63 @@ class CartController extends Controller
      * @param  \App\Models\Cart  $cart
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Cart $cart)
+    public function destroy(Cart $cart,$id)
     {
-        //
+        Cart::destroy($id);
+        return redirect()->route('cart.index');
+    }
+    public function final()
+    {
+        $user=Auth::user();
+
+        /** @var TYPE_NAME $name */
+        $name=Auth::user()->name;
+        $id=Auth::user()->id;
+        $carts = DB::table('carts')
+            ->join('products', 'carts.products_id', '=', 'products.id')
+            ->where('carts.users_id', $id)
+            ->select('carts.id','products.name', 'carts.amount', 'products.price')
+            ->get();
+
+        ['carts'=>$carts];
+
+        $total=0;
+
+        foreach ($carts as $cart)
+        {
+            $total = ($cart->price)*($cart->amount)+$total;
+        }
+
+        $data=['name'=>$name,'carts'=>$carts,'total'=>$total,'user'=>$user,'id'=>$id];
+        return view('cart.final',$data);
+    }
+
+    public function clear()
+    {
+        $name=Auth::user()->id;
+        #dd($carts);
+        $carts=DB::table('carts')
+            ->join('products','carts.products_id','=','products.id')
+            ->select('products.id','products.price','amount')
+            ->where('carts.users_id',$name)
+            ->get();
+
+        ['carts'=>$carts];
+
+        foreach ($carts as $cart)
+        {
+            Order::create([
+                'users_id'=>$name,
+                'products_id'=>$cart->id,
+                'number'=>$cart->amount,
+                'sum'=>$cart->price,
+                'date'=>Carbon::now(),
+                'status'=>'未完成',
+            ]);
+        }
+
+        Cart::where('users_id',$name)->delete();
+
+        return redirect()->route('product')->with('status','系統提示：訂單已送出！');
     }
 }

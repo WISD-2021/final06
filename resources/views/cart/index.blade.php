@@ -53,10 +53,9 @@
                                         ${{($cart->amount)*($cart->price)}}
                                     </td>
                                     <td style="text-align: center;vertical-align: middle">
-{{--                                        <form action="/cart/destroy/{{$cart->id}}" method="POST"style=" display: inline">--}}
-{{--                                            @method('DELETE')--}}
-{{--                                            @csrf--}}
-
+                                        <form action="/cart/destroy/{{$cart->id}}" method="POST"style=" display: inline">
+                                            @method('DELETE')
+                                            @csrf
                                             <button type="submit" class="btn btn-danger">刪除</button>
                                         </form>
                                     </td>
@@ -69,7 +68,7 @@
                         <b>總計：<u>${{$total}}</u></b>
                     </div>
                         <div style="text-align:center">
-                            <a class="btn btn-sm btn-primary" href="#">結帳</a>
+                            <a class="btn btn-sm btn-primary" href="{{route('cart.final')}}">結帳</a>
                         </div>
 
                 @else

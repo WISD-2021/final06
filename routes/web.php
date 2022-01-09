@@ -44,12 +44,21 @@ Route::get('/product',[\App\Http\Controllers\ProductController::class,'product']
 Route::get('/product/show/{id}',[\App\Http\Controllers\ProductController::class,'show'])->name('product.show');
 #購物車頁面
 Route::get('/cart/index',[\App\Http\Controllers\CartController::class,'index'])->name('cart.index');
+#結帳頁面
+Route::get('/cart/final',[\App\Http\Controllers\CartController::class,'final'])->name('cart.final');
 #介紹頁面
 Route::get('/information',[\App\Http\Controllers\InformationController::class,'information'])->name('information');
 
 
 #商品加入購物車
 Route::post('/cart/store',[\App\Http\Controllers\CartController::class,'store'])->name('cart.store');
+#從購物車刪除商品
+Route::delete('/cart/destroy/{id}',[\App\Http\Controllers\CartController::class,'destroy'])->name('cart.destroy');
+#購物車送出訂單
+Route::post('/cart/deliver',[\App\Http\Controllers\CartController::class,'deliver'])->name('cart.deliver');
+#送出訂單
+Route::get('/cart/clear',[\App\Http\Controllers\CartController::class,'clear'])->name('cart.clear');
+
 
 
 

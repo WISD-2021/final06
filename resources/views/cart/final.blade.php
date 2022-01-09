@@ -31,7 +31,7 @@
                         <table class="table table-bordered table-hover">
                             <thead>
                             <tr>
-                                <th width="20%" style="text-align: center">餐點名稱</th>
+                                <th width="20%" style="text-align: center">名稱</th>
                                 <th width="10%" style="text-align: center">價格</th>
                                 <th width="10%" style="text-align: center">數量</th>
                                 <th width="10%" style="text-align: center">小計</th>
