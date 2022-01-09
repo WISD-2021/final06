@@ -42,10 +42,16 @@ Route::patch('/user/{id}',[\App\Http\Controllers\UserController::class,'update']
 Route::get('/product',[\App\Http\Controllers\ProductController::class,'product'])->name('product');
 #商品詳細頁面
 Route::get('/product/show/{id}',[\App\Http\Controllers\ProductController::class,'show'])->name('product.show');
-#商品加入購物車
-Route::post('/cart/store',[\App\Http\Controllers\CartController::class,'store'])->name('cart.store');
+#購物車頁面
+Route::get('/cart/index',[\App\Http\Controllers\CartController::class,'index'])->name('cart.index');
 #介紹頁面
 Route::get('/information',[\App\Http\Controllers\InformationController::class,'information'])->name('information');
+
+
+#商品加入購物車
+Route::post('/cart/store',[\App\Http\Controllers\CartController::class,'store'])->name('cart.store');
+
+
 
 #後台管理
 Route::group(['prefix' => 'admin'], function() {
