@@ -82,9 +82,10 @@ class AdminOrderController extends Controller
      * @param  \App\Models\AdminOrder  $adminOrder
      * @return \Illuminate\Http\Response
      */
-    public function destroy(AdminOrder $adminOrder)
+    public function destroy($id)
     {
-        //
+        Order::destroy($id);
+        return redirect()->route('admin.order.index');
     }
     public function order()
     {
