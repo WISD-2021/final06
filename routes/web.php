@@ -34,7 +34,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
-
 #修改會員資料頁面
 Route::get('/user/edit',[\App\Http\Controllers\UserController::class,'edit'])->name('user.edit');
 #更新會員資料
@@ -54,7 +53,6 @@ Route::get('/order/item/{id}',[\App\Http\Controllers\OrderController::class,'sho
 #介紹頁面
 Route::get('/information',[\App\Http\Controllers\InformationController::class,'information'])->name('information');
 
-
 #商品加入購物車
 Route::post('/cart/store',[\App\Http\Controllers\CartController::class,'store'])->name('cart.store');
 #從購物車刪除商品
@@ -63,9 +61,6 @@ Route::delete('/cart/destroy/{id}',[\App\Http\Controllers\CartController::class,
 Route::post('/cart/deliver',[\App\Http\Controllers\CartController::class,'deliver'])->name('cart.deliver');
 #送出訂單
 Route::get('/cart/clear',[\App\Http\Controllers\CartController::class,'clear'])->name('cart.clear');
-
-
-
 
 #後台管理
 Route::group(['prefix' => 'admin'], function() {
