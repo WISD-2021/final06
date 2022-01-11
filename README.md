@@ -1,42 +1,53 @@
 # 系統畫面
 
+
 ## 前台
 
-### 首頁
-##### — 瀏覽餐點資訊及點餐
-![Imgur](https://i.imgur.com/2ibc5TK.jpg)
-- - -
+## ◆首頁
+- 圖片幻燈片、導覽列
+  <br><a href="https://imgur.com/2P2bkXf"><img src="https://imgur.com/2P2bkXf.png" title="source: imgur.com"/></a>
+- 介紹頁面連結
+  <br><a href="https://imgur.com/QfqYOp4"><img src="https://imgur.com/QfqYOp4.png" title="source: imgur.com"/></a>
+- 暢銷商品瀏覽
+  <br><a href="https://imgur.com/rbwgNkB"><img src="https://imgur.com/rbwgNkB.png" title="source: imgur.com"/></a>
+- 課程預約
+  <br><a href="https://imgur.com/h77NKnN"><img src="https://imgur.com/h77NKnN.png" title="source: imgur.com"/></a>
+- 聯絡資訊
+  <br><a href="https://imgur.com/Fsr8IkW"><img src="https://imgur.com/Fsr8IkW.png" title="source: imgur.com"/></a>
+- 地址
+  <br><a href="https://imgur.com/jLfJGgW"><img src="https://imgur.com/jLfJGgW.png" title="source: imgur.com"/></a>
+## ◆醬油介紹
+- 介紹手工醬油流程
+  <br><a href="https://imgur.com/QcEdNGg"><img src="https://imgur.com/QcEdNGg.png" title="source: imgur.com" /></a>
 
-### 購物車
-##### — 查看購物車內的餐點，可刪除餐點及結帳
-![Imgur](https://i.imgur.com/VA4QSYV.jpg)
-- - -
+## ◆商品呈現
+- 訂購餐點之頁面，可選擇餐點數量
+  <br><a href="https://imgur.com/AyWNw8e"><img src="https://imgur.com/AyWNw8e.png" title="source: imgur.com" /></a>
 
-### 結帳
-##### — 確認餐點及會員資料無誤
-![Imgur](https://i.imgur.com/VHEpMGh.jpg)
-- - -
+## ◆加入購物車
+- 欲訂購之餐點會先加入至購物車內，並顯示小計與總計，也可選擇繼續購物
+  <br><a href="https://imgur.com/cPopfa9"><img src="https://imgur.com/cPopfa9.png" title="source: imgur.com" /></a>
+  <br><a href="https://imgur.com/EZkM3I2"><img src="https://imgur.com/EZkM3I2.png" title="source: imgur.com" /></a>
+## ◆結帳及確認結帳
+- 結帳
+  <br><a href="https://imgur.com/dGLBl7J"><img src="https://imgur.com/dGLBl7J.png" title="source: imgur.com" /></a>
 
-### 點餐紀錄
-##### — 查詢過去點餐紀錄及其明細
-![Imgur](https://i.imgur.com/rGUdujP.jpg)
-- - -
+## ◆訂單資訊
+- 可查詢該會員的訂單及詳細資訊，包含歷史訂單
+  <br><a href="https://imgur.com/jVgY80S"><img src="https://imgur.com/jVgY80S.png" title="source: imgur.com" /></a>
+  <br><a href="https://imgur.com/mFu2426"><img src="https://imgur.com/mFu2426.png" title="source: imgur.com" /></a>
+## ◆修改會員資料
+- 提供會員修改個人資料
+  <br><a href="https://imgur.com/6cf0w2O"><img src="https://imgur.com/6cf0w2O.png" title="source: imgur.com" /></a>
 
-## 後台
+## ◆後台商品管理
+- 查看所有商品，可上、下架商品及編輯
+  <a href="https://imgur.com/LvEaVf1"><img src="https://imgur.com/LvEaVf1.png" title="source: imgur.com" /></a>
 
-### 所有餐點
-##### — 查看目前所有餐點，可新增、編輯及刪除餐點
-![Imgur](https://i.imgur.com/ZkPP6eL.jpg)
-- - -
+## ◆後台訂單管理
+- 查看所有訂單
+  <a href="https://imgur.com/ZVm6Dk7"><img src="https://imgur.com/ZVm6Dk7.png" title="source: imgur.com" /></a>
 
-### 目前訂單
-##### — 查看目前所有訂單，可送出訂單及查看其明細
-![Imgur](https://i.imgur.com/gZ1bRJO.jpg)
-- - -
-
-### 顧客回報
-##### — 查看所有會員的抱怨訊息或遇到的問題
-![Imgur](https://i.imgur.com/cUCjj5R.jpg)
 - - -
 
 # 系統名稱及作用
@@ -151,10 +162,15 @@ Route::group(['prefix' => 'admin'], function() {
 * 初始專案、資料庫關聯 — [3A832009 陳沛安](https://github.com/3A832009)
 * 資料庫建立 — [3A832012 蘇怡瑄](https://github.com/3A832012)
  - - -
-# 額外使用的套件或樣板
-* 前台樣板 — 使用極簡風格的[Clean Blog](https://startbootstrap.com/theme/clean-blog)
-* 使用套件：
-    * doctrine/dbal — 修改資料庫欄位
+## 額外使用的套件或樣板
+
+- 前台樣板：[Modern Business](https://startbootstrap.com/template/modern-business)
+
+        作為前台頁面使用，畫面簡單乾淨
+
+- 後台樣板：[Sidebar](https://startbootstrap.com/template/simple-sidebar)
+
+        作為後台管理使用，介面清楚明瞭，方便操作
 - - -
 # 系統測試資料存放位置
 #### 本專案資料夾final06底下的final06.sql
@@ -205,16 +221,24 @@ Route::group(['prefix' => 'admin'], function() {
     ．首頁
     ．購物車
     ．購買紀錄
-    ．所有商品
+    ．顯示商品
     ．醬油介紹
     
     ．README編寫
  - - -
 ## 前台 — [3A832012 蘇怡瑄](https://github.com/3A832012)
     ．修改個人資料
+
 ## 後台 — [3A832012 蘇怡瑄](https://github.com/3A832012)
     ．主控台
     ．訂單管理
     ．商品管理
 
     ．README編寫
+
+
+
+
+
+
+
